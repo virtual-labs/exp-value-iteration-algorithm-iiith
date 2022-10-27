@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Add CSS at the head of HTML file -->
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+
+	<title>
+		Value Iteration
+	</title>
+</head>
+<body>
+	<!-- Your code goes here-->
+	<div class="main" id="main">
+
+		<div class="title" id="title">
+			<h1>Value Iteration Practice</h1>
+		</div>
+		<div class="instructions">
+			<div class="columns is-centered">
+				<div class="column">
+					<div class="v-collapsible-instruction-container v-instruction-container">
+						<div class="v-collapsible is-size-5">Instructions</div>
+						<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+							<ul style="list-style: disc;">
+								<li><b>Start</b>- Starts the simulation after the inputs are properly selected. Default
+									speed is 1x.</li>
+								<li>Select the speed through dropdown menu</li>
+								<li><b>Reset</b> - Resets the simulation</li>
+								<li>Click on the green input bits to set their values.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div>
+		<div class="parameters">
+			<div class="iterations">
+				Iterations : 
+				<div class="iteration-number" id="iteration-number">
+					0
+				</div>
+			</div>
+			<div class="discount">
+				<label for="discount">Discount Factor</label>
+				<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
+			</div>
+			<div class="reward">
+				<label for="reward">Reward</label>
+				<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
+			</div>
+			<div class="grid">
+				<label for="grid-size">Grid Size</label>
+				<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
+					<option value="3">3x3</option>
+					<option value="4">4x4</option>
+					<option value="5">5x5</option>
+					<option value="6">6x6</option>
+					<option value="7">7x7</option>
+				</select>	
+			</div>
+		</div>
+		
+
+		
+		  
+		  <!-- <div id="comments-demo" class="comment-box">
+			<b>Observations:</b><br>
+			<p id="ins"> </p>
+		  </div> -->
+		
+		
+		<div class="value-calculation" id="value-calculation">
+			<!-- <p>V<sub>6</sub>(7, 8) &xlarr;  0.8[0 + 0.9 * 1] + 0.1[0 + 0.9 * 0] + 0.1[0 + 0.9 * 0] = 0.72</p> -->
+			<p class="value-calculation-paragraph" id="value-calculation-paragraph">Calculation of value function of a state appears here</p>
+			
+		</div>
+		<div class="grid-title">
+			<h2 >Present Iteration</h2>
+			<h2>Next Iteration</h2>
+		</div>
+		<div class="matrix" id="matrix">
+
+		</div>
+		<div class="control-buttons" id="button-container">
+			<div class="button-container" id="button-container">
+
+				<button class="button" id="next-value">next value</button>
+				<button class="button" id="next-iteration">next Iteration</button>
+
+			</div>
+		</div>
+		<div class="modal" id="modal1">
+			<div class="modal-dialog">
+			  <header class="modal-header">
+				<h2>Value Iteration</h2>
+				<button class="close-modal" aria-label="close modal" data-close>✕</button>
+			  </header>
+			  <section class="modal-content">The algorithm has converged after &nbsp;
+				<div class="converged-iterations" id="converged-iterations">
+					0
+				</div>  &nbsp; iterations </section>
+			  <footer class="modal-footer">Press X to close modal</footer>
+			</div>
+		</div>
+		
+		<div class="play-pause">
+			
+			  <input type="button" value="Reset" class="button-input" id="reset">
+			  <!-- <input type="button" value="Pause" class="button-input" id="pause">
+			  <input type="button" value="Start" class="button-input" id="start"> -->
+			
+			<!-- <center>
+			  <div>
+				<p id="ranger">
+				  Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();"> Max.Speed
+				</p>
+			  </div>
+		  </center> -->
+		  </div>
+	</div>
+	<!-- Add JS at the bottom of HTML file --> 
+		<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+        <script type="module" src="./js/main.js"></script>
+</body>
+</html>
