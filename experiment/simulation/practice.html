@@ -21,7 +21,7 @@
 	<div class="main" id="main">
 
 		<div class="title" id="title">
-			<h1>Value Iteration Demo</h1>
+			<h1>Value Iteration Practice</h1>
 		</div>
 		<div class="instructions">
 			<div class="columns is-centered">
@@ -41,7 +41,32 @@
 				</div>
 			</div>
     	</div>
-		
+		<div class="parameters">
+			<div class="iterations">
+				Iterations : 
+				<div class="iteration-number" id="iteration-number">
+					0
+				</div>
+			</div>
+			<div class="discount">
+				<label for="discount">Discount Factor</label>
+				<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
+			</div>
+			<div class="reward">
+				<label for="reward">Reward</label>
+				<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
+			</div>
+			<div class="grid">
+				<label for="grid-size">Grid Size</label>
+				<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
+					<option value="3">3x3</option>
+					<option value="4">4x4</option>
+					<option value="5">5x5</option>
+					<option value="6">6x6</option>
+					<option value="7">7x7</option>
+				</select>	
+			</div>
+		</div>
 		
 
 		
@@ -64,14 +89,14 @@
 		<div class="matrix" id="matrix">
 
 		</div>
-		<!-- <div class="control-buttons" id="button-container">
+		<div class="control-buttons" id="button-container">
 			<div class="button-container" id="button-container">
 
 				<button class="button" id="next-value">next value</button>
 				<button class="button" id="next-iteration">next Iteration</button>
 
 			</div>
-		</div> -->
+		</div>
 		<div class="modal" id="modal1">
 			<div class="modal-dialog">
 			  <header class="modal-header">
@@ -85,79 +110,21 @@
 			  <footer class="modal-footer">Press X to close modal</footer>
 			</div>
 		</div>
-		<div class="parameters-display">
-			<div class="iterations">
-				Iterations : &nbsp; 
-				<div class="iteration-number" id="iteration-number">
-					0
-				</div>
-			</div>
-			<div class="discount">
-				<label for="discount">Discount Factor</label>
-				<p>0.9</p>
-				<!-- <input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9"> -->
-			</div>
-			<div class="reward">
-				<label for="reward">Reward</label>
-				<p>0.0</p>
-				<!-- <input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0"> -->
-			</div>
-			<div class="grid">
-				<label for="grid-size">Grid Size</label>
-				<!-- <select name="grid-sizes" id="grid-sizes" form="grid-size-form">
-					<option value="3">3x3</option>
-					<option value="4">4x4</option>
-					<option value="5">5x5</option>
-					<option value="6">6x6</option>
-					<option value="7">7x7</option>
-				</select>	 -->
-				<p>3x3</p>
-			</div>
-		</div>
-		<div class="parameters" style="display: none">
-			<div class="iterations">
-				Iterations : 
-				<div class="iteration-number" id="iteration-number">
-					0
-				</div>
-			</div>
-			<div class="discount">
-				<label for="discount">Discount Factor</label>
-				<!-- <p>0.9</p> -->
-				<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
-			</div>
-			<div class="reward">
-				<label for="reward">Reward</label>
-				<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
-			</div>
-			<div class="grid">
-				<label for="grid-size">Grid Size</label>
-				<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
-					<option value="3">3x3</option>
-					<option value="4">4x4</option>
-					<option value="5">5x5</option>
-					<option value="6">6x6</option>
-					<option value="7">7x7</option>
-				</select>	
-			</div>
-		</div>
-
-		
 		
 		<div class="play-pause">
 			
 			  <input type="button" value="Reset" class="button-input" id="reset">
-			  <input type="button" value="Pause" class="button-input" id="pause">
-			  <input type="button" value="Start" class="button-input" id="start">
+			  <!-- <input type="button" value="Pause" class="button-input" id="pause">
+			  <input type="button" value="Start" class="button-input" id="start"> -->
 			
-		</div>
-		<center>
+			<!-- <center>
 			  <div>
 				<p id="ranger">
 				  Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();"> Max.Speed
 				</p>
 			  </div>
-		</center>
+		  </center> -->
+		  </div>
 	</div>
 	<!-- Add JS at the bottom of HTML file --> 
 		<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
