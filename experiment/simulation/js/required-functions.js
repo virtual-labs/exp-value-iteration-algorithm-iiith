@@ -253,7 +253,7 @@ export const calculateNewValue = (x, y, reward=0, gamma=0.9, grid, returnValue =
 
 export const completedOrNot = (grid, newGrid) =>
 {
-  var diff = 1000;
+  var diff = 0;
   const size = newGrid.size;
   for (let j = 0; j < size[0]; j++) {
     for (let k = 0; k < size[1]; k++) {
