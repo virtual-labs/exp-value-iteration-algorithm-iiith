@@ -1,90 +1,56 @@
 {
-    "version": 2.0,
-    "questions": [
-      {
-        "question": "What does MDP stand for?",
-        "answers": {
-          "a": "Markov Decision Process",
-          "b": "Machine Deterministic Process",
-          "c": "Magnitude Difference Policy",
-          "d": "Markov Dynamic Position"
-        },
-        "explanations": {
-          "a": "MDP stands for Markov Decision Process. The name of MDPs comes from the Russian mathematician Andrey Markov as they are an extension of Markov chains.",
-          "b": "MDP are named after an Russian mathematician. It is way to describe a system that is not deterministic but has a finite number of states and actions.",
-          "c": "MDP are named after an Russian mathematician. It is way to describe a system that is not deterministic but has a finite number of states and actions.",
-          "d": "MDP are named after an Russian mathematician. It is way to describe a system that is not deterministic but has a finite number of states and actions."
-        },
-        "correctAnswer": "a",
-        "difficulty": "beginner"
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which of the following is true regarding Value Iteration?",
+      "answers": {
+        "a": "The utility of many states do not change in one iteration, but the process has to continue as long as there is change in some states",
+        "b": "Discount factor effects the convergence of the algorithm",
+        "c": "Sometimes the corresponding policy has already converged to optimal, but the values have not converged and therefore we have to continue the value iteration process",
+        "d": "All of the above"
       },
-      {
-        "question": "What is reward hypothesis?",
-        "answers": {
-          "a": "Goal can be thought as minimizing the expected value of cumulative reward",
-          "b": "There is no correlation between the reward and the Goal",
-          "c": "Goal can be reached by taking the action with high reward at that point only",
-          "d": "Goal can be thought as maximizing the expected value of cumulative reward"
-        },
-        "explanations": {
-          "a": "",
-          "b": "",
-          "c": "",
-          "d": "Reward Hypothesis says that goals can be well thought as maximizing the expected value of cumulative reward."
-        },
-        "correctAnswer": "d",
-        "difficulty": "beginner"
+      "explanations": {
+        "a": "All of the above statements are true",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      {
-        "question": "What is reward hypothesis?",
-        "answers": {
-          "a": "Goal can be thought as minimizing the expected value of cumulative reward",
-          "b": "There is no correlation between the reward and the Goal",
-          "c": "Goal can be reached by taking the action with high reward at that point only",
-          "d": "Goal can be thought as maximizing the expected value of cumulative reward"
-        },
-        "explanations": {
-          "a": "",
-          "b": "",
-          "c": "",
-          "d": "Reward Hypothesis says that goals can be well thought as maximizing the expected value of cumulative reward."
-        },
-        "correctAnswer": "d",
-        "difficulty": "beginner"
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is 'false' regarding optimal-value function?",
+      "answers": {
+        "a": "It is the maximum Value function over all policies",
+        "b": "For every finite MDP, optimal-value function is unique",
+        "c": "For a finite MDP, optimal-value function is not guaranteed to be unique",
+        "d": "All of the above"
       },
-      {
-        "question": "An agent receives an representation of the environment at time step 't' and performs an action 'a'. Then agent receives a reward 'r' at time step ____ for the action 'a'.",
-        "answers": {
-          "a": "t",
-          "b": "t+1",
-          "c": "t+2",
-          "d": "None"
-        },
-        "explanations": {
-          "a": "",
-          "b": "At the time step 't+1' , the agent recieves the reward 'r' by assessing the performance.",
-          "c": "",
-          "d": ""
-        },
-        "correctAnswer": "b",
-        "difficulty": "intermediate"
+      "explanations": {
+        "a": "The Bellman optimality equation is actually a system of equations, one for each state, so if there are N states, then there are N equations in N unknowns. If the dynamics  of the environment are known, then in principle one can solve this system of equations for the optimal value function using any one of a variety of methods for solving systems of nonlinear equations. All optimal policies share the same optimal state-value function.",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      {
-        "question": "Imagine, an agent is in a maze-like gridworld. You would like the agent to find the goal, as quickly as possible and you need the path to be small. You give the agent a reward of +1 when it reaches the goal and the discount rate is 1.0, because this is an episodic task. When you run the agent its finds the goal, but does not seem to care how long it takes to complete each episode. How could you fix this?",
-        "answers": {
-          "a": "Give an reward of +1 for each step the agent takes.",
-          "b": "Give an reward of 0 for each step the agent takes.",
-          "c": "Give an reward of -1 for each step the agent takes and set the discount factor to be 0.9.",
-          "d": "None"
-        },
-        "explanations": {
-          "a": "",
-          "b": "",
-          "c": "By giving an reward of -1 for each action, the agent prefers a smaller path to the goal rather than a longer path. By setting the discount factor to be 0.9, the agent becomes less far-sighted and prefers to reach the goal faster.",
-          "d": ""
-        },
-        "correctAnswer": "c",
-        "difficulty": "intermediate"
-      }
-    ]
-  }
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Adding constants to reward effects optimal policy in :",
+      "answers": {
+        "a": "Both Episodic tasks and continuous tasks",
+        "b": "Continuous tasks only",
+        "c": "Episodic tasks only",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "Adding constants to rewards in episodic can have effect on longer paths in the policy. Whereas adding constants to rewards in continuous tasks has no effect on optimal policy, as long as the relative differences between rewards remain the same, the set of optimal policies is the same.",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}
