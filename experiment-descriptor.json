@@ -4,9 +4,6 @@
   "basedir": ".",
   "units": [
     {
-      "unit-type": "aim"
-    },
-    {
       "target": "aim.html",
       "source": "aim.md",
       "label": "aim",
