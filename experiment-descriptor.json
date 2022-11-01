@@ -6,7 +6,7 @@
     {
       "target": "aim.html",
       "source": "aim.md",
-      "label": "aim",
+      "label": "Aim",
       "unit-type": "task",
       "content-type": "text"
     },
