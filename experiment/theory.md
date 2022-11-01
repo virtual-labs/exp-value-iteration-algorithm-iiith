@@ -8,7 +8,7 @@ Value iteration is a method of computing an optimal policy for a Markov Decision
 
 The Bellman Equation, which captures the following direct relationship between the utility of a state to the utility of its neighbors, which also forms the basis of Value Iteration, is given by:
 
-{ Put the equation here }
+![Bellman Equation](./images/bellman-equation.png)
 
 Where U(s) is the utility of a state,  R(s, a) is the immediate reward, U(s') is the expected utility of the following state s' and P(s' |s, a) is the transition function. Gamma is the discount factor.
 
@@ -20,4 +20,4 @@ The discount factor generally determines how significant (relative weightage) th
 
 ## Pseudo Code
 
-{ Put the pseudo-code here }
+![Pseudo Code](./images/pseudo-code.png)
