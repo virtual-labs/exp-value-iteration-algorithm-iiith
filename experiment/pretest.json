@@ -36,22 +36,22 @@
         "difficulty": "beginner"
       },
       {
-        "question": "What is reward hypothesis?",
+        "question": "Which of the following is true, regarding MDP? \\ 1.The environment is fully observable. \\ 2.The future is dependent on the present and past states. \\ 3.The probability to reach the successor state only depends on the current state. ",
         "answers": {
-          "a": "Goal can be thought as minimizing the expected value of cumulative reward",
-          "b": "There is no correlation between the reward and the Goal",
-          "c": "Goal can be reached by taking the action with high reward at that point only",
-          "d": "Goal can be thought as maximizing the expected value of cumulative reward"
+          "a": "only 1",
+          "b": "1 and 2",
+          "c": "1 and 3",
+          "d": "1, 2 and 3"
         },
         "explanations": {
           "a": "",
           "b": "",
           "c": "",
-          "d": "Reward Hypothesis says that goals can be well thought as maximizing the expected value of cumulative reward."
+          "d": "Future is just dependent on the present state."
         },
         "correctAnswer": "d",
-        "difficulty": "beginner"
-      },
+        "difficulty": "intermediate"
+      },  
       {
         "question": "An agent receives an representation of the environment at time step 't' and performs an action 'a'. Then agent receives a reward 'r' at time step ____ for the action 'a'.",
         "answers": {
