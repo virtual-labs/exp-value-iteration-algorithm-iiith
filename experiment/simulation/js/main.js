@@ -443,6 +443,7 @@ function change_interval() {
 }
 
 function initialize() {
+	
 	document.getElementById("start").value = "Start";
 	document.getElementById("pause").value = "Pause";
 	onpause = 0;
