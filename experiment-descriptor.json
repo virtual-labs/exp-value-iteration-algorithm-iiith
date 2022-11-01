@@ -4,7 +4,7 @@
   "basedir": ".",
   "units": [
     {
-      "target": "aim.html",
+      "target": "index.html",
       "source": "aim.md",
       "label": "Aim",
       "unit-type": "task",
