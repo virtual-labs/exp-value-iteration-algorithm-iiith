@@ -97,6 +97,8 @@ table th, table td {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+  font-weight: bolder;
+  font-size: 1.5em;
 	margin-top: 2%;
   margin-bottom: 2%;
   margin-right: 2%;
@@ -292,7 +294,7 @@ table th, table td {
   }
   .matrix {
     display: block;
-    height: 70%;
+    height: 80%;
     width: 100%;
     /* justify-content: center; */
     text-align: center;
