@@ -40,7 +40,7 @@ table {
   justify-content: space-around;
 }
 .matrix table {
-	width: 40%;
+	/* width: 40%; */
 	height: 80%;
   margin: 4%;
   margin-top: 0%;
@@ -95,6 +95,8 @@ table th, table td {
 	justify-content: space-around;
 	margin-top: 2%;
   margin-bottom: 2%;
+  margin-right: 2%;
+  padding: 12px;
 }
 
 .parameters, .parameters-display {
