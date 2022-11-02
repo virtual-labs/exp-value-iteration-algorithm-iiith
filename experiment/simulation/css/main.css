@@ -16,7 +16,7 @@ table {
   border: 2px solid #ddd;
   border-radius: 2px;
 }
-.matrix, .grid-title, .next-iteration {
+.matrix, .grid-title, .next-iteration-display {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -32,7 +32,7 @@ table {
   /* overflow: scroll; */
   /* overflow-x: scroll; */
 }
-.grid-title, .next-iteration {
+.grid-title, .next-iteration-display {
   width: 100%;
   font-weight: bold;
   /* text-align: center; */
@@ -119,7 +119,7 @@ table th, table td {
   position: relative;
   display: flex;
   justify-content: space-around;
- 
+  overflow-wrap: break-word;
   font-size: 1.15em;
   font-weight: 100;
   /* margin: 4px; */
@@ -169,14 +169,23 @@ table th, table td {
   margin-bottom: 0%;
   transition: background-color 0.2s ease-in-out;
 }
-.play-pause {
+
+.play-pause, .button-container {
   margin: 3rem;
   margin-top: 1rem;
   align-items: center;
   justify-content: space-around;
   display: flex;
 }
-.button-input {
+.button-container {
+  margin: 0;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.button-input, .button-control {
   background-color: #5b83e7;
 	border: none;
 	color: white;
@@ -199,6 +208,11 @@ table th, table td {
 	height: 6vh;
 	width: 11vw; */
   transition: background-color 0.2s ease-in-out;
+}
+.button-control {
+  background-color: grey;
+  border-color: lightblue;
+	/* background-color: lightgrey; */
 }
 .modal { 
   position: fixed;
@@ -291,7 +305,7 @@ table th, table td {
     margin-right: 10%;
     margin-left: 10%;
   }
-  #next-iteration {
+  #next-iteration-display {
     display: none;
   }
   .matrix #nextIteration-smallscreen {
