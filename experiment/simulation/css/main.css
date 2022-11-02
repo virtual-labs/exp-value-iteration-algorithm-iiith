@@ -16,7 +16,7 @@ table {
   border: 2px solid #ddd;
   border-radius: 2px;
 }
-.matrix, .grid-title {
+.matrix, .grid-title, .next-iteration {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -29,10 +29,11 @@ table {
   justify-content: center;
   align-items: center;
   height: 60%;
-  overflow: scroll;
+  /* overflow: scroll; */
+  /* overflow-x: scroll; */
 }
-.grid-title {
-
+.grid-title, .next-iteration {
+  width: 100%;
   font-weight: bold;
   /* text-align: center; */
   /* width: fit-content; */
@@ -41,11 +42,12 @@ table {
   justify-content: space-around;
 }
 .matrix table {
-	/* width: 40%; */
+	width: 40%;
 	height: 80%;
-  margin: 4%;
+  margin: 2%;
   margin-top: 0%;
-  overflow: scroll;
+  /* overflow: scroll; */
+  
 }
 .grid-title h2 {
   font-size: 1.5em;
@@ -134,7 +136,8 @@ table th, table td {
   bottom: 40%;
   right: -5%;
 }
-.grid, .discount, .reward {
+
+ .discount, .reward {
   margin: 4px;
   margin-right: 2%;
 }
@@ -261,3 +264,40 @@ table th, table td {
   visibility: visible;
   opacity: 1;
 }
+/* .matrix .next-iteration {
+  display: none;
+} */
+#nextIteration-smallscreen {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .modal-dialog {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  .matrix {
+    display: block;
+    height: 70%;
+    width: 100%;
+    /* justify-content: center; */
+    text-align: center;
+  }
+  
+  .matrix table {
+    text-align: center;
+    width: 80%;
+	  height: 45%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  #next-iteration {
+    display: none;
+  }
+  .matrix #nextIteration-smallscreen {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+  
