@@ -303,6 +303,7 @@ function constructTable(grid) {
 		table.appendChild(row);
 	}
 
+
 	////////////////////////////////////////
 
 	var table2 = document.createElement("table");
@@ -340,6 +341,11 @@ function constructTable(grid) {
 
 	document.getElementById("matrix").innerHTML = "";
 	document.getElementById("matrix").appendChild(table);
+	var nextIteration = document.createElement("h2");
+	nextIteration.setAttribute("id", "nextIteration-smallscreen");
+	nextIteration.setAttribute("class", "next-iteration");
+	nextIteration.appendChild(document.createTextNode("Next Iteration"));
+	document.getElementById("matrix").appendChild(nextIteration);
 	document.getElementById("matrix").appendChild(table2);
 	colourFinalStates(grid);
 }
