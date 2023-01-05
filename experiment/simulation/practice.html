@@ -43,31 +43,7 @@
 				</div>
 			</div>
     	</div>
-		<div class="parameters">
-			<div class="iterations">
-				Iterations: 
-				<div class="iteration-number" id="iteration-number">
-					0
-				</div>
-			</div>
-			<div class="discount">
-				<label for="discount">Discount Factor</label>
-				<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
-			</div>
-			<div class="reward">
-				<label for="reward">Reward</label>
-				<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
-			</div>
-			<div class="grid">
-				<label for="grid-size">Grid Size</label>
-				<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
-					<option value="3">3x3</option>
-					<option value="4">4x4</option>
-					<option value="5">5x5</option>
-					<option value="6">6x6</option>
-				</select>	
-			</div>
-		</div>
+		
 		
 
 		
@@ -86,10 +62,41 @@
 		<div class="grid-title">
 			<h2 class="present-iteration-display" id="present-iteration-display">Present Iteration</h2>
 			<h2 class="next-iteration-display" id="next-iteration-display">Next Iteration</h2>
-		</div>
-		<div class="matrix" id="matrix">
+			<h2 class="observation-display" id="observation-display">Controls</h2>
 
 		</div>
+		<div class="parent-matrix">
+			<div class="matrix" id="matrix">
+
+			</div>
+			<div class="parameters observe">
+				<div class="iterations observe">
+					<label class="it">Iterations : &nbsp; </label>
+					<div class="iteration-number" id="iteration-number">
+						0
+					</div>
+				</div>
+				<div class="discount observe">
+					<label for="discount">Discount: &nbsp; </label>
+					<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
+				</div>
+				<div class="reward observe">
+					<label for="reward">Reward : &nbsp; </label>
+					<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
+					<!-- <p>0.9</p> -->
+				</div>
+				<div class="grid observe">
+					<label for="grid-size">Grid Size : &nbsp; </label>
+					<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
+						<option value="3">3x3</option>
+						<option value="4">4x4</option>
+						<option value="5">5x5</option>
+						<option value="6">6x6</option>
+					</select>	
+				</div>
+			</div>
+		</div>
+		
 		<div class="control-buttons" id="button-container">
 			<div class="button-container" id="button-container">
 
