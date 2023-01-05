@@ -63,10 +63,41 @@
 		<div class="grid-title">
 			<h2 class="present-iteration-display" id="present-iteration-display">Present Iteration</h2>
 			<h2 class="next-iteration-display" id="next-iteration-display">Next Iteration</h2>
+			<h2 class="observation-display" id="observation-display">Observations</h2>
 		</div>
+		<div class="parent-matrix">
+			<div class="matrix" id="matrix">
 
-		<div class="matrix" id="matrix">
-
+			</div>
+			<div class="parameters-display">
+				<div class="iterations observe" id="iterations">
+					
+					<label class="it">Iterations : &nbsp; </label>  
+					<div class="iteration-number" id="iteration-number">
+						0
+					</div>
+				</div>
+				<div class="discount observe">
+					<label for="discount">Discount Factor : &nbsp;</label>
+					<p>0.9</p>
+					<!-- <input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9"> -->
+				</div>
+				<div class="reward observe">
+					<label for="reward">Reward : &nbsp;</label>
+					<p>0.0</p>
+					<!-- <input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0"> -->
+				</div>
+				<div class="grid observe">
+					<label for="grid-size">Grid Size : &nbsp;</label>
+					<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
+						<option value="3">3x3</option>
+						<option value="4">4x4</option>
+						<option value="5">5x5</option>
+						<option value="6">6x6</option>
+					</select>	
+					<!-- <p>3x3</p> -->
+				</div>
+			</div>
 		</div>
 		<!-- <div class="control-buttons" id="button-container">
 			<div class="button-container" id="button-container">
@@ -87,34 +118,6 @@
 					0
 				</div>  &nbsp; iterations </section>
 			  <footer class="modal-footer">Press X to close modal</footer>
-			</div>
-		</div>
-		<div class="parameters-display">
-			<div class="iterations" id="iterations">
-				Iterations : &nbsp; 
-				<div class="iteration-number" id="iteration-number">
-					0
-				</div>
-			</div>
-			<div class="discount">
-				<label for="discount">Discount Factor</label>
-				<p>0.9</p>
-				<!-- <input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9"> -->
-			</div>
-			<div class="reward">
-				<label for="reward">Reward</label>
-				<p>0.0</p>
-				<!-- <input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0"> -->
-			</div>
-			<div class="grid">
-				<label for="grid-size">Grid Size</label>
-				<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
-					<option value="3">3x3</option>
-					<option value="4">4x4</option>
-					<option value="5">5x5</option>
-					<option value="6">6x6</option>
-				</select>	
-				<!-- <p>3x3</p> -->
 			</div>
 		</div>
 		<div class="parameters" style="display: none">
@@ -145,22 +148,23 @@
 			</div>
 		</div>
 
-		
+		<div style="margin-right: 10%; text-align:end">
+			<div>
+			  <p id="ranger">
+				Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();"> Max.Speed
+			  </p>
+			</div>
+		</div>
 		
 		<div class="play-pause">
 			
 			  <input type="button" value="Reset" class="button-input" id="reset">
-			  <input type="button" value="Pause" class="button-input" id="pause">
 			  <input type="button" value="Start" class="button-input" id="start">
+			  <input type="button" value="Pause" class="button-input" id="pause">
+
 			
 		</div>
-		<center>
-			  <div>
-				<p id="ranger">
-				  Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();"> Max.Speed
-				</p>
-			  </div>
-		</center>
+		
 	</div>
 	<!-- Add JS at the bottom of HTML file --> 
 		<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
