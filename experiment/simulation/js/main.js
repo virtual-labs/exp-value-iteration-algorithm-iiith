@@ -347,6 +347,11 @@ function constructTable(grid) {
 	nextIteration.appendChild(document.createTextNode("Next Iteration"));
 	document.getElementById("matrix").appendChild(nextIteration);
 	document.getElementById("matrix").appendChild(table2);
+	var observation = document.createElement("h2");
+	observation.setAttribute("id", "observation-smallscreen");
+	observation.setAttribute("class", "next-iteration-display");
+	observation.appendChild(document.createTextNode("Observations"));
+	document.getElementById("matrix").appendChild(observation);
 	colourFinalStates(grid);
 }
 
