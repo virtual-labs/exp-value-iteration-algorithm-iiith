@@ -2,6 +2,23 @@
   "version": 2.0,
   "questions": [
     {
+      "question": "Value Iteration is an example which programming method",
+      "answers": {
+        "a": "Greedy",
+        "b": "Dynamic Programming",
+        "c": "Object-oriented programming",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Value Iteration is a dynamic programming method to find solutions for MDPs.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
       "question": "Which of the following is true regarding Value Iteration?",
       "answers": {
         "a": "The utility of many states do not change in one iteration, but the process has to continue as long as there is change in some states",
@@ -16,7 +33,7 @@
         "d": ""
       },
       "correctAnswer": "d",
-      "difficulty": "intermediate"
+      "difficulty": "beginner"
     },
     {
       "question": "Which of the following is 'false' regarding optimal-value function?",
@@ -33,7 +50,7 @@
         "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "advanced"
+      "difficulty": "intermediate"
     },
     {
       "question": "Adding constants to reward effects optimal policy in :",
@@ -51,6 +68,42 @@
       },
       "correctAnswer": "c",
       "difficulty": "advanced"
+    },
+    {
+      "question": "Value Iteration always find the optimal policy, when run to convergence",
+      "answers": {
+        "a": "True",
+        "b": "False",
+        "c": "Cannot Say",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "This is a result of the Bellman backups being a contraction, as discussed.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Optimal policy can be reached before all the Vk(s) (value function of state) reaches their optimal value.",
+      "answers": {
+        "a": "True, after certain stage policy doesnot depend upon the utility values of state.",
+        "b": "True, because policy can remain the same while the utility value of state changes",
+        "c": "False, only after all the states reach their optimal utility values the optimal policy can be declared",
+        "d": "None of them"
+      },
+      "explanations": {
+        "a": "",
+        "b": "Even though utility values of states are changing, the optimal action to take in a state can remain the same",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
+    
+
   ]
 }
