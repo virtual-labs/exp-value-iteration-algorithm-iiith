@@ -169,16 +169,14 @@ table th, table td {
 }
 .parameters, .parameters-display {
   width: 20% !important;
+  min-width: fit-content;
   margin-right: 2%;
   border: 4px solid rgb(134, 221, 124);
   border-radius: 4%;
   margin-top: 3.5%;
-  height: 80%;
   background-color: rgb(235, 231, 231);
   padding: 1%;
-}
-.parameters, .parameters-display {
-	width: 100%;
+	/* width: 100%; */
 	display: flex;
 	/* justify-content: end; */
 	/* padding-right: 4%; */
@@ -188,9 +186,11 @@ table th, table td {
   text-align: center;
   /* margin: 2%; */
   flex-direction: column;
-  height: 60%;
+  height: max-content
+  
   /* justify-content: center; */
 }
+
 .observe {
   display: flex;
   justify-content: space-between;
@@ -345,9 +345,10 @@ table th, table td {
 /* .matrix .next-iteration {
   display: none;
 } */
-#nextIteration-smallscreen {
+#nextIteration-smallscreen, #observation-smallscreen {
   display: none;
 }
+
 @media screen and (max-width: 600px) {
   .modal-dialog {
     max-width: 100%;
@@ -357,16 +358,35 @@ table th, table td {
   .matrix {
     display: block;
     height: 80%;
-    width: 100%;
+    width: 100% !important;
     /* justify-content: center; */
     text-align: center;
   }
   
+
+  .parent-matrix {
+    display: block;
+    height: max-content;
+  }
+  .parameters-display, .parameters
+  {
+    width: 100%;
+    font-size: medium;
+    text-align: center;
+    min-width: 65%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
   .matrix table {
     text-align: center;
-    width: 80%;
-	  height: 45%;
-    /* margin-right: 10%; */
+    width: 95%;
+	  height: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+    /* display: flex; */
     /* margin-left: 10%; */
   }
   #next-iteration-display {
@@ -377,5 +397,16 @@ table th, table td {
     font-size: 1.5em;
     font-weight: bold;
   }
+
+  #observation-display 
+  {
+    display: none;
+  }
+  .matrix #observation-smallscreen {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
 }
   
