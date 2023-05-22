@@ -284,6 +284,12 @@ table th, table td {
   transition: rgb(62, 142, 208);
   
 }
+.resetButton {
+  background-color: rgb(62, 142, 208);
+  border-color: rgb(62, 142, 208);
+  font-size: large;
+  /* background-color: lightgrey; */
+}
 
 
 #start {
@@ -371,6 +377,25 @@ table th, table td {
   display: none;
 }
 
+/* style="margin-right: 10%; text-align:center" */
+.inputSlider {
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: left;
+  font-size: medium;
+  min-width: fit-content;
+  /* min-width: 65%; */
+}
+/* Align items :horizontally flex */
+#ranger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4%;
+  display: flex;
+}
 @media screen and (max-width: 600px) {
   .modal-dialog {
     max-width: 100%;
