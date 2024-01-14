@@ -1,5 +1,3 @@
-# Experiment Aim: Value Iteration Algorithm in Gridworld
-
 This experiment is structured to demonstrate the value iteration algorithm applied in a Gridworld setting. It provides an interactive and educational platform where users can observe and analyze the evolution of value functions and derived policies at each iteration within the Markov Decision Process (MDP).
 
 ## Objectives:
