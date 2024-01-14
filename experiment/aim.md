@@ -1,4 +1,4 @@
-This experiment is structured to demonstrate the value iteration algorithm applied in a Gridworld setting. It provides an interactive and educational platform where users can observe and analyze the evolution of value functions and derived policies at each iteration within the Markov Decision Process (MDP).
+This experiment is structured to demonstrate the value iteration algorithm applied in a Gridworld setting. It provides an interactive and educational platform where users can observe and analyze the evolution of value functions and derived policies at each iteration within the Markov Decision Process (MDP). 
 
 ## Objectives:
 - **Interactive Value Function Visualization:** Enable users to visually track the changes in value functions across the Gridworld at each iteration, enhancing understanding of the value iteration process.
