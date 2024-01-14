@@ -1,0 +1,22 @@
+
+/home/runner/work/exp-value-iteration-algorithm-iiith/exp-value-iteration-algorithm-iiith/experiment/simulation/js/main.js
+   80:29  warning  'e' is defined but never used                  no-unused-vars
+  116:3   warning  'oldColor' is assigned a value but never used  no-unused-vars
+  122:33  warning  'e' is defined but never used                  no-unused-vars
+  312:11  warning  'i' is already defined                         no-redeclare
+  313:7   warning  'row' is already defined                       no-redeclare
+  314:12  warning  'j' is already defined                         no-redeclare
+  315:8   warning  'cell' is already defined                      no-redeclare
+  366:15  warning  'reward' is already defined                    no-redeclare
+  366:23  warning  'discountFactor' is defined but never used     no-unused-vars
+  530:2   warning  Unnecessary semicolon                          no-extra-semi
+
+/home/runner/work/exp-value-iteration-algorithm-iiith/exp-value-iteration-algorithm-iiith/experiment/simulation/js/required-functions.js
+  22:5  warning  'rewardUP' is assigned a value but never used     no-unused-vars
+  24:5  warning  'rewardLeft' is assigned a value but never used   no-unused-vars
+  26:5  warning  'rewardRight' is assigned a value but never used  no-unused-vars
+  28:5  warning  'rewardDown' is assigned a value but never used   no-unused-vars
+
+✖ 14 problems (0 errors, 14 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

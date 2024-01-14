@@ -1,0 +1,459 @@
+/* You CSS goes in here */
+.main, body, head, html {
+	height: 100%;
+}
+:root {
+  --lightgray: #efefef;
+  --blue: steelblue;
+  --white: #fff;
+  --black: rgba(0, 0, 0, 0.8);
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+}
+.parent-matrix {
+  height: 50%;
+  display: flex;
+}
+.matrix {
+  width: 80% !important;
+}
+.matrix, .grid-title, .next-iteration-display {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  /* width: fit-content; */
+  /* border: 2px solid #ddd; */
+  border-radius: 2px;
+  /* margin: 4px; */
+  padding: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  /* overflow: scroll; */
+  /* overflow-x: scroll; */
+}
+.grid-title {
+  width: 105% !important;
+}
+.grid-title, .next-iteration-display {
+  width: 100%;
+  font-weight: bold;
+  /* text-align: center; */
+  /* width: fit-content; */
+  height: fit-content;
+  color: gray;
+  justify-content: space-around;
+}
+.matrix table {
+	width: 40%;
+	height: 80%;
+  /* margin: 2%; */
+  margin-top: 0%;
+  /* overflow: scroll; */
+  
+}
+.grid-title h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  color: gray;
+  
+}
+.grid 
+{
+  position: relative;
+  /* font-family: Arial; */
+}
+.grid-sizes {
+  width: 40%;
+}
+
+.grid {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.grid select {
+  background-color:rgb(134, 221, 124);
+  color: white;
+  padding: 2px;
+  width: 100px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.grid::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.grid:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.grid select option {
+  padding: 30px;
+}
+
+table th, table td {
+  text-align: center !important;
+  font-weight: 400;
+  font-size: large;
+  vertical-align: middle !important;
+  /* padding: 1rem; */
+  /* margin: auto; */
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  flex: auto;
+  
+  transition: background-color 0.2s ease-in-out;
+  /* position: absolute; */
+}
+.fa-solid {
+  font-size: 1.2em;
+  color: blue;
+  text-align: center;
+  vertical-align: middle;
+  /* padding: 1rem; */
+  margin-left: 6px;
+  /* border: 1px solid #ddd;
+  border-radius: 2px; */
+  flex: auto;
+  transition: background-color 0.2s ease-in-out;
+  /* position: absolute; */
+}
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin: 4%;
+}
+
+.value-calculation {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+  font-weight: bolder;
+  font-size: 1.5em;
+	margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  padding: 12px;
+}
+.parameters, .parameters-display {
+  width: 20% !important;
+  min-width: fit-content;
+  margin-right: 2%;
+  border: 4px solid rgb(134, 221, 124);
+  border-radius: 4%;
+  margin-top: 3.5%;
+  background-color: rgb(235, 231, 231);
+  padding: 1%;
+	/* width: 100%; */
+	display: flex;
+	/* justify-content: end; */
+	/* padding-right: 4%; */
+  font-size: 1.5em;
+  font-weight: 100;
+  /* vertical-align: middle; */
+  text-align: center;
+  /* margin: 2%; */
+  flex-direction: column;
+  height: max-content
+  
+  /* justify-content: center; */
+}
+
+.observe {
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  
+}
+/* .observe:nth-child(1) {
+  flex-direction: row-reverse;
+} */
+
+.it, .discount, .reward {
+  margin: 4px;
+  margin-right: 2%;
+}
+
+/* .parameters label {
+	margin-right: 1.5%;
+} */
+
+.button-container {
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+  
+}
+
+.button {
+  width: 20%;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #ddd;
+  color: rgb(69, 66, 66);
+  font-size: 1.5em;
+  font-weight: 500;
+  vertical-align: middle;
+  text-align: center;
+  margin: 2%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.play-pause, .button-container {
+  margin: 15rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4%;
+  display: flex;
+}
+/* move buttons slightly to the right */
+.play-pause {
+  margin-left: -0.5rem;
+}
+.button-container {
+  margin: 0;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.button-input, .button-control {
+  background-color:#5b83e7;
+	border: none;
+	color: white;
+	padding: 1% 3%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  ;
+	/* font-size: 16px; */
+  
+  font-size: large;
+  font-weight: 500;
+	/* margin: 4px 2px; */
+	cursor: pointer;
+	background-color: white;
+	border-radius: 2vw;
+	border-style: solid;
+	/* border-width: 1px; */
+	border-color: rgb(190, 187, 187);
+	background-color: rgb(190, 187, 187);
+	/* position: absolute; */
+	/* left: 45%;
+	top: 70%;
+	height: 6vh;
+	width: 11vw; */
+  transition: rgb(62, 142, 208);
+  
+}
+.resetButton {
+  background-color: rgb(62, 142, 208);
+  border-color: rgb(62, 142, 208);
+  font-size: large;
+  /* background-color: lightgrey; */
+}
+
+
+#start {
+  background-color: rgb(62, 142, 208);
+  border-color: rgb(62, 142, 208);
+}
+#start:hover {
+  background-color: rgb(190, 187, 187);
+  border-color: rgb(190, 187, 187);
+}
+.button-control {
+  background-color:rgb(190, 187, 187);
+  border-color: rgb(190, 187, 187);
+  font-size: large;
+	/* background-color: lightgrey; */
+}
+.modal { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: auto;
+  cursor: default;
+  /* background-color: grey; */
+}
+
+.modal-dialog > * {
+  padding: 1rem;
+}
+ 
+.modal-header,
+.modal-footer {
+  background: var(--lightgray);
+}
+ 
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-content {
+  display: flex;
+}
+ 
+.modal-header .modal-close {
+  font-size: 1.5rem;
+}
+ 
+.modal p + p {
+  margin-top: 1rem;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+ 
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+/* .matrix .next-iteration {
+  display: none;
+} */
+#nextIteration-smallscreen, #observation-smallscreen {
+  display: none;
+}
+
+/* style="margin-right: 10%; text-align:center" */
+.inputSlider {
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: left;
+  font-size: medium;
+  min-width: fit-content;
+  /* min-width: 65%; */
+}
+/* Align items :horizontally flex */
+#ranger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4%;
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  .modal-dialog {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  .matrix {
+    display: block;
+    height: 80%;
+    width: 100% !important;
+    /* justify-content: center; */
+    text-align: center;
+  }
+  
+
+  .parent-matrix {
+    display: block;
+    height: max-content;
+  }
+  .parameters-display, .parameters
+  {
+    width: 100%;
+    font-size: medium;
+    text-align: center;
+    min-width: 65%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .matrix table {
+    text-align: center;
+    width: 95%;
+	  height: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+    /* display: flex; */
+    /* margin-left: 10%; */
+  }
+  #next-iteration-display {
+    display: none;
+  }
+  .matrix #nextIteration-smallscreen {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  #observation-display 
+  {
+    display: none;
+  }
+  .matrix #observation-smallscreen {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+}
+  
