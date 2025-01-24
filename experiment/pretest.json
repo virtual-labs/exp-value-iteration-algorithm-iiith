@@ -1,39 +1,90 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "What does MDP stand for?",
+        "answers": {
+          "a": "Markov Decision Process",
+          "b": "Machine Deterministic Process",
+          "c": "Magnitude Difference Policy",
+          "d": "Markov Dynamic Position"
+        },
+        "explanations": {
+          "a": "MDP stands for Markov Decision Process. The name of MDPs comes from the Russian mathematician Andrey Markov as they are an extension of Markov chains.",
+          "b": "MDP are named after an Russian mathematician. It is way to describe a system that is not deterministic but has a finite number of states and actions.",
+          "c": "MDP are named after an Russian mathematician. It is way to describe a system that is not deterministic but has a finite number of states and actions.",
+          "d": "MDP are named after an Russian mathematician. It is way to describe a system that is not deterministic but has a finite number of states and actions."
+        },
+        "correctAnswer": "a",
+        "difficulty": "beginner"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "What is reward hypothesis?",
+        "answers": {
+          "a": "Goal can be thought as minimizing the expected value of cumulative reward",
+          "b": "There is no correlation between the reward and the Goal",
+          "c": "Goal can be reached by taking the action with high reward at that point only",
+          "d": "Goal can be thought as maximizing the expected value of cumulative reward"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "Reward Hypothesis says that goals can be well thought as maximizing the expected value of cumulative reward."
+        },
+        "correctAnswer": "d",
+        "difficulty": "beginner"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "question": "Which of the following is true, regarding MDP? \\ 1.The environment is fully observable. \\ 2.The future is dependent on the present and past states. \\ 3.The probability to reach the successor state only depends on the current state. ",
+        "answers": {
+          "a": "only 1",
+          "b": "1 and 2",
+          "c": "1 and 3",
+          "d": "1, 2 and 3"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": "Future is just dependent on the present state."
+        },
+        "correctAnswer": "d",
+        "difficulty": "intermediate"
+      },  
+      {
+        "question": "An agent receives an representation of the environment at time step 't' and performs an action 'a'. Then agent receives a reward 'r' at time step ____ for the action 'a'.",
+        "answers": {
+          "a": "t",
+          "b": "t+1",
+          "c": "t+2",
+          "d": "None"
+        },
+        "explanations": {
+          "a": "",
+          "b": "At the time step 't+1' , the agent recieves the reward 'r' by assessing the performance.",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "b",
+        "difficulty": "intermediate"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+      {
+        "question": "Imagine, an agent is in a maze-like gridworld. You would like the agent to find the goal, as quickly as possible and you need the path to be small. You give the agent a reward of +1 when it reaches the goal and the discount rate is 1.0, because this is an episodic task. When you run the agent its finds the goal, but does not seem to care how long it takes to complete each episode. How could you fix this?",
+        "answers": {
+          "a": "Give an reward of +1 for each step the agent takes.",
+          "b": "Give an reward of 0 for each step the agent takes.",
+          "c": "Give an reward of -1 for each step the agent takes and set the discount factor to be 0.9.",
+          "d": "None"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "By giving an reward of -1 for each action, the agent prefers a smaller path to the goal rather than a longer path. By setting the discount factor to be 0.9, the agent becomes less far-sighted and prefers to reach the goal faster.",
+          "d": ""
+        },
+        "correctAnswer": "c",
+        "difficulty": "intermediate"
+      }
+    ]
+  }

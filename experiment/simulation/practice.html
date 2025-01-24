@@ -21,7 +21,7 @@
 	<div class="main" id="main">
 
 		<div class="title" id="title">
-			<h1>Value Iteration Demo</h1>
+			<h1>Value Iteration Practice</h1>
 		</div>
 		<div class="instructions">
 			<div class="columns is-centered">
@@ -30,13 +30,13 @@
 						<div class="v-collapsible is-size-5">Instructions</div>
 						<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
 							<ul style="list-style: disc;">
-								<li><b>Start:</b> Initiates the simulation with the chosen settings. The default speed is 1x.</li>
-								<li><b>Speed Control:</b> Adjust the simulation speed using the slider provided.</li>
 								<li><b>Reset:</b> Resets the simulation to its initial state.</li>
-								<li><b>Grid Size:</b> Modify the grid size using the dropdown menu.</li>
-								<li><b>Creating Obstacles:</b> Click once on any cell in the left grid to make it an obstacle (blocked state).</li>
-								<li><b>Setting Rewards:</b> Double-click a cell to cycle its state through green (reward: 1), red (penalty: -1), and back to normal.</li>
-								<li><b>Animation:</b> The left grid animates the current cell being calculated, while the right grid highlights the corresponding state value.</li>
+								<li><b>Next Value:</b> Calculates and updates the value for the next state.</li>
+								<li><b>Next Iteration:</b> Performs calculations for all states to complete a full iteration.</li>
+								<li><b>Grid Customization:</b> Adjust grid size, rewards, and discount factor using the dropdown menus provided.</li>
+								<li><b>Creating Obstacles:</b> Single click on any cell in the left grid to set it as an obstacle (blocked state).</li>
+								<li><b>Setting Rewards:</b> Double-click a cell to toggle its state between green (reward: 1), red (penalty: -1), and normal state.</li>
+								<li><b>Grid Animation:</b> The left grid shows a visual representation of the cell currently being calculated, with the corresponding state value highlighted on the right grid.</li>
 							</ul>
 						</div>
 					</div>
@@ -62,59 +62,49 @@
 		<div class="grid-title">
 			<h2 class="present-iteration-display" id="present-iteration-display">Present Iteration</h2>
 			<h2 class="next-iteration-display" id="next-iteration-display">Next Iteration</h2>
-			<h2 class="observation-display" id="observation-display">Observations</h2>
+			<h2 class="observation-display" id="observation-display">Controls</h2>
+
 		</div>
 		<div class="parent-matrix">
 			<div class="matrix" id="matrix">
 
 			</div>
-			<div class="parameters-display">
-				<div class="iterations observe" id="iterations">
-					
-					<label class="it">Iterations : &nbsp; </label>  
+			<div class="parameters observe">
+				<div class="iterations observe">
+					<label class="it">Iterations : &nbsp; </label>
 					<div class="iteration-number" id="iteration-number">
 						0
 					</div>
 				</div>
 				<div class="discount observe">
-					<label for="discount">Discount Factor : &nbsp;</label>
-					<p>0.9</p>
-					<!-- <input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9"> -->
+					<label for="discount">Discount: &nbsp; </label>
+					<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
 				</div>
 				<div class="reward observe">
-					<label for="reward">Reward : &nbsp;</label>
-					<p>0.0</p>
-					<!-- <input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0"> -->
+					<label for="reward">Reward : &nbsp; </label>
+					<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
+					<!-- <p>0.9</p> -->
 				</div>
 				<div class="grid observe">
-					<label for="grid-size">Grid Size : &nbsp;</label>
+					<label for="grid-size">Grid Size : &nbsp; </label>
 					<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
 						<option value="3">3x3</option>
 						<option value="4">4x4</option>
 						<option value="5">5x5</option>
 						<option value="6">6x6</option>
 					</select>	
-					<!-- <p>3x3</p> -->
-				</div>
-				<div class="inputSlider" >
-					<div>
-					  <div id="ranger">
-						<p>Min.Speed</p>
-						<input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();">
-						<p>Max.Speed</p>
-					  </div>
-					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="control-buttons" id="button-container">
+		
+		<div class="control-buttons" id="button-container">
 			<div class="button-container" id="button-container">
 
-				<button class="button" id="next-value">next value</button>
-				<button class="button" id="next-iteration">next Iteration</button>
+				<button class="button-control" id="next-value">next value</button>
+				<button class="button-control" id="next-iteration">next Iteration</button>
 
 			</div>
-		</div> -->
+		</div>
 		<div class="modal" id="modal1">
 			<div class="modal-dialog">
 			  <header class="modal-header">
@@ -128,50 +118,13 @@
 			  <footer class="modal-footer">Press X to close modal</footer>
 			</div>
 		</div>
-		<div class="parameters" style="display: none">
-			<div class="iterations">
-				Iterations : 
-				<div class="iteration-number" id="iteration-number">
-					0
-				</div>
-			</div>
-			<div class="discount">
-				<label for="discount">Discount Factor</label>
-				<!-- <p>0.9</p> -->
-				<input type="number" id="discount" name="discount" min="0" max="1" step="0.1" value="0.9">
-			</div>
-			<div class="reward">
-				<label for="reward">Reward</label>
-				<input type="number" id="reward" name="reward" min="-1" max="1" step="0.1" value="0.0">
-			</div>
-			<div class="grid">
-				<label for="grid-size">Grid Size</label>
-				<select name="grid-sizes" id="grid-sizes" form="grid-size-form">
-					<option value="3">3x3</option>
-					<option value="4">4x4</option>
-					<option value="5">5x5</option>
-					<option value="6">6x6</option>
-					<option value="7">7x7</option>
-				</select>	
-			</div>
-		</div>
-
-		<!-- <div style="margin-right: 10%; text-align:end">
-			<div>
-			  <p id="ranger">
-				Min.Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500" onclick="change_interval();" onchange="change_interval();"> Max.Speed
-			  </p>
-			</div>
-		</div> -->
-		
 		<div class="play-pause">
 			
-			  <input type="button" value="Reset" class="button-input" id="reset">
-			  <input type="button" value="Start" class="button-input" id="start">
-			  <input type="button" value="Pause" class="button-input" id="pause">
-
-			
-		</div>
+			<input type="button" value="Reset" class="button-input resetButton" id="reset">
+			<input type="button" value="Pause" class="button-input" id="pause" style="display: none;">
+			<input type="button" value="Start" class="button-input" id="start" style="display: none;">
+		  
+	  </div>
 		
 	</div>
 	<!-- Add JS at the bottom of HTML file --> 
